@@ -1,0 +1,91 @@
+*{
+    margin: 0px;
+}
+body{
+    background-image: url(../img/theme.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+.main{
+    width: 50%;
+    height:100vh;
+    /* background-color:green; */
+    margin: 0 auto;
+    border:solid rgb(14, 79, 100);
+}
+header{
+    height: 20vh;
+    background-color:rgb(14, 79, 100);
+    text-align: center;
+}
+header h1{
+    color: white;
+    font-size: 60px;
+    padding-top:50px;
+}
+.info{
+    margin-top: 60px;
+    /* background-color:blue; */
+    border: solid turquoise;
+    height: 10vh;
+    color: white;
+}
+
+.container {
+    margin-top: 80px;
+    height: 20vh;
+    border: solid turquoise;
+    position: relative;
+    width: 100%;
+    /* color: white; */
+}
+
+
+.box1,
+.box2,
+.box3{
+    /* border: blue;
+    /* color:white;  */
+    height: 20vh;
+    /* width: 310px; */
+    float: left;
+    text-align: center;
+}
+.box1{
+    background-color:lightblue;
+    width: 35%;
+    
+}
+.box2{
+    background-color:rgb(180, 230, 173);
+    width: 30%;
+}
+.box3{
+    background-color:rgb(225, 173, 230);
+    width: 35%;
+}
+
+.buttons{
+    margin-top: 100px;
+}
+.btn1{
+    background-color: blue;
+    width: 232px;
+    height: 60px;
+}
+.btn2{
+    background-color:green;
+    width: 232px;
+    height: 60px;
+}
+.btn3{
+    background-color:brown;
+    width: 232px;
+    height: 60px;
+}
+.btn4{
+    background-color:yellow;
+    width: 232px;
+    height: 60px;
+}
