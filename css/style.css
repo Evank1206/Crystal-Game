@@ -28,7 +28,7 @@ header h1{
     margin-top: 60px;
     /* background-color:blue; */
     border: solid turquoise;
-    height: 10vh;
+    min-height: 10vh;
     color: white;
 }
 
