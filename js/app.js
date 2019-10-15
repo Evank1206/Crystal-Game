@@ -1,62 +1,105 @@
-// var randomNum = [1,2,3,4,5,6,7,8,9,10];
-// // console.log(randomNum);
-// for(var i = 0; i<randomNum.length; i++){
-
-//     function 
-
-// }
-
-//global variables for the 4 buttons
-// button 1 = random number
-// button 2 = 
-
-//initalize a score variable
-//score = 0;
-
 
 //click functions for each of the button
 //when button 1 is clicked, you look for the global variable button 1 and see what its value is
 //add this number to your score (score = button 1 + score)
 //put this score into the HTML (1st run: replacing score = 0 to score = 5 )
 
-var button1 = Math.random()*10;
-var button2 = Math.random()*10;
-var button3 = Math.random()*10;
-var button4 = Math.random()*10;
+//global variables for the 4 buttons
 
-// $(document).ready(function(){
+var button1 = Math.floor(Math.random()*10)+1;
+var button2 = Math.floor(Math.random()*10)+1;
+var button3 = Math.floor(Math.random()*10)+1;
+var button4 = Math.floor(Math.random()*10)+1;
+
+//initalize a score variable
+
+var score = 0;
+var wins = 0;
+var loses = 0;
+// $('#win').html(win);
+// $('#lose').html(0+lose);
+
+// jquery function starts here
+
+$(document).ready(function(){ 
+
+// I setted for targeted randon number between from 30 to 100.
+// which is computer picked.
+
+    var ranNum = Math.floor(Math.random()* 70)+30+1;
+    $('#match-Number').html(ranNum);
+    // console.log(ranNum);
+// score =0  is the display order; this point I start with 0, 
+    score = 0;
+// then assigned to html h3 element
+    $('#score').text(" " + score);
+
+// assigned button1 function here once click 
     $(".btn1").on("click", function(){
-        console.log(button1);
-$('#Score').text("test");
+// the clicked random number added by same number
+        score += button1;
+// check win global scope for function 
+        checkWin()  
+    
+ });
+   function checkWin(){
+        $('#score').html(score);
+// conditional for loses or Win
+        if(score === ranNum){
+            wins++;
+            $('#win').html(wins);
+            score = 0; 
+
+            $('#score').html(score);
+        
+            ranNum = Math.floor(Math.random()* 70)+30+1;
+            $('#match-Number').html(ranNum);
+
+        }
+        else if( score > ranNum){
+            // increment loses, reset score, and generate a new random number
+            loses++;
+            $('#lose').html(loses);
+            score = 0;
+            $('#score').html(score);
+
+            ranNum = Math.floor(Math.random()* 70)+30+1;
+            $('#match-Number').html(ranNum);
 
 
-    });
+        } 
+    
+   }
+ 
+
     $(".btn2").on("click", function(){
-        console.log(button2);
+      score += button2;
+      checkWin() 
+    $('#score').html(score);
+
     });
-    $(".btn3").on("click", function(){
-        console.log(button3);
+    // console.log(button2);
+
+    $(".btn3").on("click", function(){  
+        score += button3;
+        checkWin()
+    $('#score').html(button3);
     });
-    $(".btn4").on("click", function(){
-        console.log(button4);
+    // console.log(button3);
+
+    $(".btn4").on("click", function(){   
+        score += button4;
+        checkWin()
+    $('#score').html(button4);
     });
+    // console.log(button4);
+ 
 
-    // var ranNum = Math.floor(Math.random()* 60)+30;
-    // $('#Match-Number').html(ranNum);
-// console.log(ranNum);
-
-
-    // var getNum = Math.floor(Math.random()*10)+1;
-// console.log(getNum);
-    // $('#Score').html(getNum);
-
-
-// var getNum1 = Math.floor(Math.random()*10)+1;
-
-// $('.btn1').html(getNum1);
+    
 
 
 
 
 
-// });
+
+});
