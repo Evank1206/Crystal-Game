@@ -34,8 +34,8 @@ header h1{
 
 .container {
     margin-top: 80px;
-    height: 20vh;
-    border: solid turquoise;
+    height: 22vh;
+    /* border: solid turquoise; */
     position: relative;
     width: 100%;
     /* color: white; */
@@ -68,24 +68,19 @@ header h1{
 
 .buttons{
     margin-top: 100px;
+    padding-left: 4px;
 }
-.btn1{
+.btn1, .btn2, .btn3, .btn4{
     background-color: blue;
     width: 232px;
     height: 60px;
 }
 .btn2{
     background-color:green;
-    width: 232px;
-    height: 60px;
 }
 .btn3{
     background-color:brown;
-    width: 232px;
-    height: 60px;
 }
 .btn4{
     background-color:yellow;
-    width: 232px;
-    height: 60px;
 }
